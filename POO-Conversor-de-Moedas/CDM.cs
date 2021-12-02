@@ -9,15 +9,14 @@ namespace POO_Conversor_de_Moedas
     //Declaração da classe CDM (Conversor De Moeda.)
     class CDM
     {
-        //Declaração das variáveis double ValorReal e ValorTotal. A primeira será utilizada para converter o valor do dólar para o real, e o segundo representa o valor total.
-        double ValorReal, ValorTotal;
+        //Declaração das variáveis double ValorReal, ValorTotal e IOF. A primeira será utilizada para converter o valor do dólar para o real, e o segundo representa o valor total.
+        //O IOF tem o valor atual do mesmo no momento da escrita do script.
+        //Valor encontrado em https://www.istoedinheiro.com.br/mudancas-no-iof-passam-a-valer-hoje-veja-como-isso-atinge-o-seu-bolso/.
+        double ValorReal, ValorTotal, IOF = .0411;
         //Declaração da variável CotaDolar, utilizando automatic properties. Representa o valor que multiplicará ValorDolar.
         double CotaDolar { get; set; }
         //Declaração da variável ValorDolar, utilizando automatic properties. Representa o valor que será convertido em ValorReal.
         double ValorDolar { get; set; }
-        //Declaração da variável double que carrega o valor atual do IOF, no momento da escrita do script.
-        //Valor encontrado em https://www.istoedinheiro.com.br/mudancas-no-iof-passam-a-valer-hoje-veja-como-isso-atinge-o-seu-bolso/.
-        double IOF = .0411;
         //Declaração do construtor desta classe, que será utilizado no programa principal.
         public CDM(double cotaDolar, double valorDolar)
         {
